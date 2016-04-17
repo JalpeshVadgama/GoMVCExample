@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;GoMVC&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../FirstOne" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../9fans.net" />
+      <root url="file://$PROJECT_DIR$/../FirstProject" />
+      <root url="file://$PROJECT_DIR$/../sourcegraph.com" />
+    </CLASSES>
+    <SOURCES />
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>
