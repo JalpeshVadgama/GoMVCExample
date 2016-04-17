@@ -6,6 +6,7 @@ import (
 	"os"
 	"strings"
 	"bufio"
+	"GoMVC/src/ViewModels"
 )
 
 func main() {
@@ -16,8 +17,15 @@ func main() {
 
 		template := templates.Lookup(requestedFile + ".html")
 
+		var context interface{}=nil
+		if requestedFile=="index"{
+			context = ViewModels.GetIndex()
+		}else if requestedFile=="about"{
+			context =ViewModels.GetAbout()
+		}
+
 		if template != nil {
-			template.Execute(w, nil)
+			template.Execute(w, context)
 		} else {
 			w.WriteHeader(404)
 		}
