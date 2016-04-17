@@ -4,6 +4,8 @@ import (
 	"net/http"
 	"html/template"
 	"os"
+	"strings"
+	"bufio"
 )
 
 func main() {
@@ -18,12 +20,37 @@ func main() {
 		}
 
 	})
+	http.HandleFunc("/asset/img/",serveRequest)
+	http.HandleFunc("/asset/css",serveRequest)
 	http.ListenAndServe(":8070", nil)
 }
 
 func serveRequest(w http.ResponseWriter, req *http.Request){
 	path := "public" + req.URL.Path
 	var contentType string
+	if(strings.HasSuffix(path,".css"){
+		contentType="text/css"
+	}else if (strings.HasSuffix(path,".png"){
+		contentType= "image/png"
+	}else if (strings.HasSuffix(path,".jpg"){
+		contentType= "image/jpg"
+	}else if (strings.HasSuffix(path,".gif"){
+		contentType= "image/gif"
+	}else {
+		contentType="text/plain"
+	}
+	f,err:=os.Open(path)
+
+	if err!=nil{
+		defer f.Close()
+		w.Header().Add("Content-Type",contentType)
+
+		br := bufio.NewReader(f)
+		br.WriteTo(w)
+	}else{
+		w.WriteHeader(404)
+	}
+
 
 }
 
