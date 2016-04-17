@@ -9,6 +9,7 @@ import (
 )
 
 func main() {
+
 	templates := populateTemplates()
 	http.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
 		requestedFile := req.URL.Path[1:]
@@ -20,41 +21,43 @@ func main() {
 		}
 
 	})
-	http.HandleFunc("/asset/img/",serveRequest)
-	http.HandleFunc("/asset/css",serveRequest)
+	http.HandleFunc("/img/", serveRequest)
+	http.HandleFunc("/assets/css", serveRequest)
 	http.ListenAndServe(":8070", nil)
+
 }
 
-func serveRequest(w http.ResponseWriter, req *http.Request){
+func serveRequest(w http.ResponseWriter, req *http.Request) {
 	path := "public" + req.URL.Path
 	var contentType string
-	if(strings.HasSuffix(path,".css"){
-		contentType="text/css"
-	}else if (strings.HasSuffix(path,".png"){
-		contentType= "image/png"
-	}else if (strings.HasSuffix(path,".jpg"){
-		contentType= "image/jpg"
-	}else if (strings.HasSuffix(path,".gif"){
-		contentType= "image/gif"
-	}else {
-		contentType="text/plain"
-	}
-	f,err:=os.Open(path)
 
-	if err!=nil{
+	if (strings.HasSuffix(path, ".css") {
+		contentType = "text/css"
+	} else if (strings.HasSuffix(path, ".png") {
+		contentType = "image/png"
+	} else if (strings.HasSuffix(path, ".jpg") {
+		contentType = "image/jpg"
+	} else if (strings.HasSuffix(path, ".gif") {
+		contentType = "image/gif"
+	} else {
+		contentType = "text/plain"
+	}
+	f, err := os.Open(path)
+
+	if err != nil {
 		defer f.Close()
-		w.Header().Add("Content-Type",contentType)
+		w.Header().Add("Content-Type", contentType)
 
 		br := bufio.NewReader(f)
 		br.WriteTo(w)
-	}else{
+	} else {
 		w.WriteHeader(404)
 	}
-
 
 }
 
 func populateTemplates() *template.Template {
+
 	result := template.New("templates")
 	basePath := "templates"
 	templateFolder, _ := os.Open(basePath)
@@ -71,4 +74,5 @@ func populateTemplates() *template.Template {
 	}
 	result.ParseFiles(*templatePaths...)
 	return result
+
 }
