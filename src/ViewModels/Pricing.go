@@ -13,6 +13,7 @@ type HostingCategory struct{
 }
 
 func GetPricing(){
+
 	result:= Pricing{
 		Title:"Pricing",
 		Active:"Pricing",

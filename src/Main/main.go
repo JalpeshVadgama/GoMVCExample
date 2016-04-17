@@ -17,11 +17,15 @@ func main() {
 
 		template := templates.Lookup(requestedFile + ".html")
 
-		var context interface{}=nil
-		if requestedFile=="index"{
+		var context interface{} = nil
+
+		switch requestedFile {
+		case "index":
 			context = ViewModels.GetIndex()
-		}else if requestedFile=="about"{
-			context =ViewModels.GetAbout()
+		case "about":
+			context = ViewModels.GetAbout()
+		case "pricing":
+			context = ViewModels.GetPricing()
 		}
 
 		if template != nil {

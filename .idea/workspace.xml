@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4b5b1eb-8681-43ce-bcc8-b5cff129e116" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/main.go" afterPath="$PROJECT_DIR$/src/Main/main.go" />
     </list>
     <ignored path="GoMVC.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
+            <state relative-caret-position="656">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
                 <element signature="e#14#103#0" expanded="true" />
               </folding>
@@ -65,11 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pricing.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pricing.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ViewModels/pricing.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1886">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="615">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -104,10 +104,10 @@
         <option value="$PROJECT_DIR$/templates/_head.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/_header.html" />
-        <option value="$PROJECT_DIR$/src/Main/main.go" />
         <option value="$PROJECT_DIR$/src/ViewModels/About.go" />
         <option value="$PROJECT_DIR$/src/ViewModels/Pricing.go" />
         <option value="$PROJECT_DIR$/src/ViewModels/pricing.go" />
+        <option value="$PROJECT_DIR$/src/Main/main.go" />
       </list>
     </option>
   </component>
@@ -360,7 +360,7 @@
       <updated>1460875283686</updated>
       <workItem from="1460875284825" duration="5686000" />
       <workItem from="1460890123162" duration="1336000" />
-      <workItem from="1460891581951" duration="3607000" />
+      <workItem from="1460891581951" duration="3929000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit for gomvc exmaple. Created folders required.">
       <created>1460875572193</created>
@@ -373,7 +373,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10629000" />
+    <option name="totallyTimeSpent" value="10951000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -589,16 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-          <folding>
-            <element signature="e#14#103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ViewModels/about.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="82">
@@ -617,9 +607,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ViewModels/pricing.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1886">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="615">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#14#103#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
