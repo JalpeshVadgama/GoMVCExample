@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e4b5b1eb-8681-43ce-bcc8-b5cff129e116" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/main.go" afterPath="$PROJECT_DIR$/src/Main/main.go" />
-    </list>
+    <list default="true" id="e4b5b1eb-8681-43ce-bcc8-b5cff129e116" name="Default" comment="" />
     <ignored path="GoMVC.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +24,8 @@
       <file leaf-file-name="main.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="533">
+              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
               <folding>
                 <element signature="e#14#103#0" expanded="true" />
               </folding>
@@ -360,7 +358,7 @@
       <updated>1460875283686</updated>
       <workItem from="1460875284825" duration="5686000" />
       <workItem from="1460890123162" duration="1336000" />
-      <workItem from="1460891581951" duration="3929000" />
+      <workItem from="1460891581951" duration="4957000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit for gomvc exmaple. Created folders required.">
       <created>1460875572193</created>
@@ -373,7 +371,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10951000" />
+    <option name="totallyTimeSpent" value="11979000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -615,8 +613,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="533">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
           <folding>
             <element signature="e#14#103#0" expanded="true" />
           </folding>
