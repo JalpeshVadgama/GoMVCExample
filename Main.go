@@ -9,44 +9,50 @@ import (
 )
 
 func main() {
-
 	templates := populateTemplates()
+
 	http.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
 		requestedFile := req.URL.Path[1:]
+
 		template := templates.Lookup(requestedFile + ".html")
+
 		if template != nil {
 			template.Execute(w, nil)
 		} else {
 			w.WriteHeader(404)
 		}
-
 	})
-	http.HandleFunc("/img/", serveRequest)
-	http.HandleFunc("/assets/css", serveRequest)
+
+	http.HandleFunc("/assets/", serveResource)
 	http.ListenAndServe(":8070", nil)
-
 }
-
-func serveRequest(w http.ResponseWriter, req *http.Request) {
+func serveResource(w http.ResponseWriter, req *http.Request) {
 	path := "public" + req.URL.Path
-	var contentType string
 
-	if (strings.HasSuffix(path, ".css") {
+	var contentType string
+	if (strings.HasSuffix(path, ".css")) {
 		contentType = "text/css"
-	} else if (strings.HasSuffix(path, ".png") {
+	} else if (strings.HasSuffix(path, ".png")) {
 		contentType = "image/png"
-	} else if (strings.HasSuffix(path, ".jpg") {
+	} else if (strings.HasSuffix(path, ".js")) {
+		contentType = "application/javascript"
+	} else if (strings.HasSuffix(path, ".jpg")) {
 		contentType = "image/jpg"
-	} else if (strings.HasSuffix(path, ".gif") {
+	} else if (strings.HasSuffix(path, ".woff")) {
+		contentType = "application/x-font-woff"
+	} else if (strings.HasSuffix(path, ".ttf")) {
+		contentType = "application/x-font-ttf"
+	} else if (strings.HasSuffix(path, ".gif")) {
 		contentType = "image/gif"
 	} else {
 		contentType = "text/plain"
 	}
+
 	f, err := os.Open(path)
 
-	if err != nil {
+	if err == nil {
 		defer f.Close()
-		w.Header().Add("Content-Type", contentType)
+		w.Header().Add("content-type", contentType)
 
 		br := bufio.NewReader(f)
 		br.WriteTo(w)
@@ -57,22 +63,23 @@ func serveRequest(w http.ResponseWriter, req *http.Request) {
 }
 
 func populateTemplates() *template.Template {
-
 	result := template.New("templates")
+
 	basePath := "templates"
 	templateFolder, _ := os.Open(basePath)
+
 	defer templateFolder.Close()
 
-	templatePathRow, _ := templateFolder.Readdir(-1)
+	templatePathRaw, _ := templateFolder.Readdir(-1)
 	templatePaths := new([] string)
 
-	for _, pathInfo := range templatePathRow {
+	for _, pathInfo := range templatePathRaw {
 		if !pathInfo.IsDir() {
 			*templatePaths = append(*templatePaths, basePath + "/" + pathInfo.Name())
 		}
-
 	}
 	result.ParseFiles(*templatePaths...)
+
 	return result
 
 }
